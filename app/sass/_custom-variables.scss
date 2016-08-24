@@ -1,0 +1,20 @@
+//Fonts
+//Font for title
+@include font-face("BravoRG",
+        inline-font-files("bravoRg/BravoRG.otf", truetype));
+$font-title: 'BravoRG', sans-serif;
+
+//Font sub-title
+@import 'https://fonts.googleapis.com/css?family=PT+Sans';
+
+$font-subtitle: 'PT Sans', sans-serif;
+
+//Font logo
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+$font-logo: 'Montserrat', sans-serif;
+
+
+//Font Roboto
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+
+$font-roboto: 'Roboto', sans-serif;

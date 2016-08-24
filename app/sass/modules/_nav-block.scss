@@ -1,0 +1,118 @@
+.navigation-block {
+  padding: 230px 30px 170px;
+  @include clearfix;
+
+  .wrap {
+    max-width: 1560px;
+    margin: 0 auto;
+  }
+
+  .item {
+    display: table;
+    float: left;
+    width: calc(33.33% - 10px);
+    padding: 12px;
+    position: relative;
+    text-align: center;
+
+    &:nth-child(1) {
+      margin-right: 10px;
+      background: url(../images/nav-bg-1.jpg) no-repeat;
+      background-size: cover;
+    }
+    &:nth-child(2) {
+      margin-right: 5px;
+      margin-left: 5px;
+      background: url(../images/nav-bg-2.jpg) no-repeat;
+      background-size: cover;
+    }
+    &:nth-child(3) {
+      margin-left: 10px;
+      background: url(../images/nav-bg-3.jpg) no-repeat;
+      background-size: cover;
+    }
+
+    a {
+      height: 400px;
+      display: table-cell;
+      vertical-align: middle;
+      text-decoration: none;
+      z-index: 9;
+
+      h3 {
+        color: #b79f66;
+        font-family: $font-title;
+        @include fontSize(44px);
+        font-weight: 400;
+        line-height: 44px;
+        letter-spacing: 15px;
+        transition: color ease 0.5s;
+      }
+
+      .overlay {
+        background-color: rgba(0,0,0,0.2);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s all ease;
+
+        p {
+          color: white;
+          font-family: $font-title;
+          @include fontSize(38px);
+          font-weight: 400;
+          text-transform: uppercase;
+          width: 100%;
+          opacity: 1;
+          letter-spacing: 8px;
+          position: absolute;
+          top: 42%;
+          transition: 0.5s;
+
+          &:before, &:after {
+            content: "";
+            height: 1px;
+            width: 90%;
+            background: #313131;
+            display: block;
+            max-width: 385px;
+            margin: 8px auto;
+          }
+        }
+
+      }
+
+      &:hover {
+        h3 {
+          color: #313131;
+        }
+
+        .overlay {
+          opacity: 1;
+
+        }
+      }
+    }
+
+    .sub-title {
+      position: absolute;
+      left: 50%;
+      bottom: 30%;
+      transform: translate(-50%);
+      color: #fefefe;
+      font-family: $font-subtitle;
+      @include fontSize(16px);
+      font-weight: 500;
+      line-height: 26px;
+
+      &:after {
+       content: url(../images/arrow.png);
+        padding-left: 20px;
+        vertical-align: text-bottom;
+      }
+    }
+  }
+}

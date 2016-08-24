@@ -1,0 +1,19 @@
+html {
+  font-size: 16px!important;
+}
+
+//Mixin to calculate REM
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
+
+body {
+  background-color: #191919;
+}
+

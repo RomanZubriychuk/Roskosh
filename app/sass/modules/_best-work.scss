@@ -1,0 +1,83 @@
+.best-work-front {
+  padding: 230px 170px 200px;
+
+  .box {
+    max-width: 1560px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px;
+    background: url(../images/best-work-front.jpg);
+    background-size: cover;
+    display: table;
+    position: relative;
+
+    a {
+      display: table-cell;
+      height: 430px;
+      text-align: center;
+      vertical-align: middle;
+      text-decoration: none;
+
+      h1 {
+        color: #b79f66;
+        font-family: $font-title;
+        @include fontSize(80px);
+        font-weight: 400;
+        line-height: 90px;
+        letter-spacing: 28px;
+        transition: color ease 0.5s;
+
+      }
+
+      .overlay {
+        background-color: rgba(0,0,0,0.2);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s all ease;
+
+        p {
+          color: white;
+          font-family: $font-title;
+          @include fontSize(38px);
+          font-weight: 400;
+          text-transform: uppercase;
+          width: 100%;
+          opacity: 1;
+          letter-spacing: 8px;
+          position: absolute;
+          top: 42%;
+          transition: 0.5s;
+          transform: translateY(30px);
+
+          &:before, &:after {
+            content: "";
+            height: 1px;
+            width: 90%;
+            background: #313131;
+            display: block;
+            max-width: 385px;
+            margin: 8px auto;
+          }
+        }
+      }
+
+      &:hover {
+        h1 {
+          color: #313131;
+        }
+
+        .overlay {
+          opacity: 1;
+
+          p {
+            transform: translateY(0px);
+          }
+        }
+      }
+    }
+  }
+}

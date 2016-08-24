@@ -1,0 +1,63 @@
+.box, .item {
+
+  .borders {
+    background-color: #88714d;
+    position: absolute;
+
+    &.border-top-right {
+      height: 1px;
+      top: 10px;
+      left: 50%;
+      width: 0%;
+    }
+    &.border-right {
+      height: 0%;
+      width: 1px;
+      top: 10px;
+      right: 10px;
+    }
+    &.border-bottom {
+      height: 1px;
+      bottom: 10px;
+      right: 10px;
+      width: 0%;
+    }
+    &.border-left {
+      height: 0%;
+      width: 1px;
+      bottom: 10px;
+      left: 10px;
+    }
+    &.border-top-left {
+      height: 1px;
+      top: 10px;
+      left: 10px;
+      width: 0%;
+    }
+  }
+
+  &:hover {
+    .borders {
+      &.border-top-right {
+        width: calc(50% - 10px);
+        transition: 0.05s ease-in 0s;
+      }
+      &.border-right {
+        height: calc(100% - 20px);
+        transition: 0.1s linear 0.05s;
+      }
+      &.border-bottom {
+        width: calc(100% - 20px);
+        transition: 0.18s linear 0.15s;
+      }
+      &.border-left {
+        height: calc(100% - 20px);
+        transition: 0.1s linear 0.33s;
+      }
+      &.border-top-left {
+        width: 50%;
+        transition: 0.45s ease-out 0.43s;
+      }
+    }
+  }
+}
