@@ -1,0 +1,42 @@
+.more-link {
+  text-align: center;
+  display: inline-block;
+  color: #fefefe;
+  font-family: $font-subtitle;
+  @include fontSize(16px);
+  font-weight: 500;
+  line-height: 26px;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  &:after {
+    content: url(../images/arrow.png);
+    vertical-align: text-bottom;
+    position: absolute;
+    padding-left: 7px;
+    top: -2px;
+  }
+
+  &:before {
+    content: '';
+    width: 0;
+    height: 1px;
+    left: 0;
+    top: 50%;
+    background: #88714d;
+    display: block;
+    position: absolute;
+    transition: 0.2s;
+  }
+
+  &:hover, &:active, &:visited, &:focus {
+    text-decoration: none;
+    color: #fefefe;
+
+    &:before {
+      width: 100%;
+    }
+  }
+}

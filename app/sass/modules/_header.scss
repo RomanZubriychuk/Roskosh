@@ -23,6 +23,12 @@ header {
     text-transform: uppercase;
     padding-top: 21px;
     padding-left: 27px;
+    position: fixed;
+    z-index: 99;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     span {
       font-size: 15px;
@@ -43,7 +49,111 @@ header {
   }
 
   .menu {
-    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    transition: 0.5s;
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+
+      ol  {
+        transform: translate(-50%, -50%);
+      }
+
+    }
+
+    ol {
+      counter-reset: li;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -75%);
+      transition: 0.8s;
+
+      li {
+        list-style: none;
+        position: relative;
+
+        &:before {
+          counter-increment: li;
+          content: counter(li);
+          font-family: $font-title;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 29px;
+          color: #88714d;
+          position: absolute;
+          line-height: 75px;
+          left: 0;
+        }
+
+        .triangle {
+          position: absolute;
+          right: 10px;
+          top: 33px;
+          width: 0px;
+          height: 0px;
+          border: 6px solid transparent;
+          border-left: 8px solid #88714d;
+        }
+
+        .no {
+          font-family: $font-title;
+          font-weight: 300;
+          font-style: normal;
+          @include fontSize(14px);
+          color: #454545;
+          text-transform: uppercase;
+          text-decoration: underline;
+          letter-spacing: 2px;
+          position: absolute;
+          left: -20px;
+          top: 38%;
+        }
+
+        a {
+          text-transform: uppercase;
+          letter-spacing: 9px;
+          display: block;
+          line-height: 80px;
+          font-weight: 300;
+          font-style: normal;
+          font-family: $font-title;
+          @include fontSize(40px);
+          color: #d7d7d7;
+          text-align: center;
+          text-decoration: none;
+          padding-left: 60px;
+          padding-right: 60px;
+
+          &:after {
+            content: '';
+            background: #88714d;
+            top: 38px;
+            height: 2px;
+            position: absolute;
+            width: 0;
+            left: 10%;
+            transition: width 0.2s;
+          }
+
+          &:hover {
+            &:after {
+              width: 85%;
+            }
+          }
+        }
+      }
+    }
+
   }
 
   .lang {

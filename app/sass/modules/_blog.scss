@@ -1,0 +1,71 @@
+.blog {
+  width: 100%;
+  max-width: 1590px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  @include clearfix;
+
+  .item {
+    width: 50%;
+    max-width: 764px;
+    padding: 15px;
+    padding-bottom: 30px;
+    border: 1px solid #b79f66;
+    text-align: center;
+    margin-bottom: 30px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .text {
+      color: white;
+      font-family: $font-roboto;
+      @include fontSize(16px);
+      font-weight: 400;
+      line-height: 22px;
+      max-width: 650px;
+      margin: 0 auto;
+      text-align: left;
+      padding-top: 17px;
+      padding-bottom: 35px;
+
+    }
+
+    &.archive {
+      padding-top: 70px;
+      padding-bottom: 80px;
+      a {
+        display: block;
+        color: white;
+        font-family: $font-roboto;
+        @include fontSize(22px);
+        font-weight: 400;
+        line-height: 40px;
+      }
+    }
+
+    &.left-side {
+      float: left;
+      width: calc(50% - 15px);
+      margin-right: 15px;
+    }
+
+    &.right-side {
+      float: right;
+      width: calc(50% - 15px);
+      margin-left: 15px;
+    }
+  }
+}
+
+.date {
+  color: #dfdede;
+  font-family: $font-roboto;
+  @include fontSize(14px);
+  font-weight: 300;
+  line-height: 22px;
+  text-align: center;
+}

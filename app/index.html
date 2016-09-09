@@ -10,7 +10,7 @@
     <link href="css/style.css" rel="stylesheet">
 
   </head>
-  <body class="home-page">
+  <body>
     <header>
       <div class="wrap">
         <div id="menu-btn">
@@ -18,16 +18,17 @@
           <div class="btn"><span> </span><span></span><span></span></div>
         </div>
         <div class="menu">
-          <ul>
-            <li><a href="about.html">Главная</a></li>
-            <li><a href="about.html">О нас</a></li>
-            <li><a href="best-works.html">Лучшие работы</a></li>
-            <li><a href="blog.html">Новости</a></li>
-            <li><a href="contact.html">Контакты</a></li>
-            <li><a href="services.html">Услуги</a></li>
-            <li><a href="news.html">Single post</a></li>
-            <li><a href="product.html">Single project</a></li>
-          </ul>
+          <ol>
+            <li><span class="no">No</span><a href="index.html">Главная</a><span class="triangle"></span></li>
+            <li><span class="no">No</span><a href="about.html">О нас</a><span class="triangle"></span></li>
+            <li><span class="no">No</span><a href="best-works.html">Лучшие работы</a><span class="triangle"></span></li>
+            <li><span class="no">No</span><a href="blog.html">Новости</a><span class="triangle"></span></li>
+            <li><span class="no">No</span><a href="portfolio.html">Портфолио</a><span class="triangle"></span></li>
+            <li><span class="no">No</span><a href="contact.html">Контакты</a><span class="triangle"></span></li>
+            <li><span class="no">No</span><a href="services.html">Услуги</a><span class="triangle"></span></li>
+            <li><span class="no">No</span><a href="news.html">Single post</a><span class="triangle"></span></li>
+            <li><span class="no">No</span><a href="product.html">Single project</a><span class="triangle"></span></li>
+          </ol>
         </div>
         <div class="lang">
             <select id="language" name="">
@@ -46,7 +47,7 @@
       </div>
       <div class="best-work-front">
         <div class="box">
-          <a href="best-works.html"><h1>ЛУЧШИЕ НОМИНАЦИИ</h1>
+          <a href="best-works.html"><p class="title">ЛУЧШИЕ НОМИНАЦИИ</p>
             <div class="overlay">
               <p>Лучшие работы</p>
             </div>
@@ -68,10 +69,10 @@
       <div class="navigation-block">
         <div class="wrap">
           <div class="item">
-            <div class="sub-title">
-              НАШЕ ПОРТФОЛИО
-            </div>
             <a href="#">
+              <div class="sub-title">
+                <div class="more-link">НАШЕ ПОРТФОЛИО</div>
+              </div>
               <h3>В МИР ДИЗАЙНА</h3>
               <div class="overlay">
                 <p>Работы</p>
@@ -84,8 +85,10 @@
             <span class="borders border-top-left"></span>
           </div>
           <div class="item">
-            <div class="sub-title">НАШИ ПРЕДЛОЖЕНИЯ</div>
             <a href="#">
+              <div class="sub-title">
+                <div class="more-link">НАШИ ПРЕДЛОЖЕНИЯ</div>
+              </div>
               <h3>ЧТО МЫ ДЕЛАЕМ</h3>
               <div class="overlay">
                 <p>Услуги</p>
@@ -98,8 +101,10 @@
             <span class="borders border-top-left"></span>
           </div>
           <div class="item">
-            <div class="sub-title">НАШ ОФИС</div>
             <a href="#">
+              <div class="sub-title">
+                <div class="more-link">НАШ ОФИС</div>
+              </div>
             <h3>ПОЗНАКОМИТЬСЯ</h3>
             <div class="overlay">
               <p>Связаться</p>
@@ -125,6 +130,7 @@
         <div class="footer-menu">
           <ul>
             <li><a href="index.html">Главная</a></li>
+            <li><a href="portfolio.html">Портфолио</a></li>
             <li><a href="about.html">О нас</a></li>
             <li><a href="best-works.html">Работы</a></li>
             <li><a href="blog.html">Новости</a></li>

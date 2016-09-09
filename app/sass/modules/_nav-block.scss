@@ -102,17 +102,8 @@
       left: 50%;
       bottom: 30%;
       transform: translate(-50%);
-      color: #fefefe;
-      font-family: $font-subtitle;
-      @include fontSize(16px);
-      font-weight: 500;
-      line-height: 26px;
+      z-index: 9;
 
-      &:after {
-       content: url(../images/arrow.png);
-        padding-left: 20px;
-        vertical-align: text-bottom;
-      }
     }
   }
 }

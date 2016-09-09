@@ -1,12 +1,12 @@
-.best-work-front {
-  padding: 230px 170px 200px;
+.best-work-front, .best-work {
+  padding: 230px 15px 200px;
 
   .box {
     max-width: 1560px;
     width: 100%;
     margin: 0 auto;
     padding: 16px;
-    background: url(../images/best-work-front.jpg);
+    background: url(../images/best-work-front.jpg) no-repeat 50%;
     background-size: cover;
     display: table;
     position: relative;
@@ -18,7 +18,7 @@
       vertical-align: middle;
       text-decoration: none;
 
-      h1 {
+      .title {
         color: #b79f66;
         font-family: $font-title;
         @include fontSize(80px);
@@ -66,7 +66,7 @@
       }
 
       &:hover {
-        h1 {
+        .title {
           color: #313131;
         }
 
@@ -80,4 +80,49 @@
       }
     }
   }
+}
+
+.best-work {
+  padding-bottom: 80px;
+  padding-top: 30px;
+  .box {
+    margin-bottom: 30px;
+
+    &.item-1 {
+      background: url(../images/best-w-1.jpg) no-repeat 50%;
+      background-size: cover;
+    }
+    &.item-2 {
+      background: url(../images/best-w-2.jpg) no-repeat 50%;
+      background-size: cover;
+    }
+    &.item-3 {
+      background: url(../images/best-w-3.jpg) no-repeat 50%;
+      background-size: cover;
+    }
+    &.item-4 {
+      background: url(../images/best-w-4.jpg) no-repeat 50%;
+      background-size: cover;
+    }
+    &.item-5 {
+      background: url(../images/best-w-5.jpg) no-repeat 50%;
+      background-size: cover;
+    }
+
+    a {
+      height: 60vh;
+
+      .overlay {
+        background-color: rgba(0, 0, 0, 0.62);
+
+        p {
+          top: 44%;
+        }
+      }
+    }
+  }
+}
+.best-work-link {
+  text-align: center;
+  padding-bottom: 150px;
 }

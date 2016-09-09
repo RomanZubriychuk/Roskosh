@@ -17,3 +17,43 @@ body {
   background-color: #191919;
 }
 
+
+.base-title {
+  color: #b79f66;
+  font-family: $font-title;
+  @include fontSize(80px);
+  font-weight: 400;
+  line-height: 90px;
+  letter-spacing: 28px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.base-title-sm {
+  @extend .base-title;
+  @include fontSize(44px);
+  letter-spacing: 15px;
+}
+
+//base box without overlay
+.base-block {
+
+  .box {
+    max-width: 1560px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px;
+    position: relative;
+    min-height: 60vh;
+
+    p {
+      color: white;
+      font-family: $font-roboto;
+      @include fontSize(16px);
+      font-weight: 400;
+      line-height: 22px;
+    }
+
+  }
+}
+

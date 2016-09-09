@@ -1,0 +1,140 @@
+.top-video {
+  height: 100vh;
+  display: block;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
+.top-block {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  h1 {
+    text-transform: uppercase;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 2px;
+      background-color: #b79f66;
+      position: absolute;
+      left: 50%;
+      top: -50px;
+      transform: translate(-50%, 0);
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 2px;
+      background-color: #b79f66;
+      position: absolute;
+      left: 50%;
+      bottom: -50px;
+      transform: translate(-50%, 0);
+    }
+  }
+
+//Best work page
+  &.top-best-work {
+    background: url(../images/best-work-top.jpg);
+    background-size: cover;
+  }
+
+  //About page
+  &.top-about {
+    background: url(../images/best-work-top.jpg);
+    background-size: cover;
+    flex-direction: column;
+
+    h1 {
+      position: absolute;
+      top: 29%;
+
+      &:before , &:after {
+        display: none;
+      }
+    }
+
+    .sub-title {
+      color: white;
+      font-family: $font-roboto;
+      @include fontSize(40px);
+      font-weight: 400;
+      line-height: 30px;
+      position: relative;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 70px;
+        height: 2px;
+        background-color: #b79f66;
+        position: absolute;
+        left: 50%;
+        top: -30px;
+        transform: translate(-50%, 0);
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 70px;
+        height: 2px;
+        background-color: #b79f66;
+        position: absolute;
+        left: 50%;
+        bottom: -25px;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+
+  //Blog page
+  &.top-blog {
+    height: auto;
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+
+  //Services page
+  &.top-services {
+    background: url(../images/services-top.jpg);
+    background-size: cover;
+    flex-direction: column;
+    justify-content: space-around;
+
+    h1 {
+      position: absolute;
+      top: 29%;
+    }
+
+    .text {
+      margin-top: 220px;
+      max-width: 674px;
+      color: white;
+      font-family: $font-roboto;
+      @include fontSize(16px);
+      font-weight: 400;
+      line-height: 22px;
+      text-align: center;
+    }
+  }
+}

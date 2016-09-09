@@ -1,0 +1,24 @@
+.owl-carousel {position: relative;}
+
+.owl-controls {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  margin-top: -28px;
+  z-index: -1;
+
+  .owl-prev, .owl-next {
+    width: 30px;
+    height: 56px;
+    font-size: 0;
+    background: url(../images/control-carousel.png);
+    float: left;
+    margin-left: -90px;
+  }
+  .owl-next {
+    transform: rotate(180deg);
+    float: right;
+    margin-left: 0;
+    margin-right: -90px;
+  }
+}
