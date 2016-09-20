@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Roskosh</title>
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" media="all" />
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link href="css/style.css" rel="stylesheet">
+    <script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script>
+    <script>
+        google.maps.event.addDomListener(window, 'load', init);
+        var map;
+        function init() {
+            var mapOptions = {
+                center: new google.maps.LatLng(50.388195, 30.696992),
+                zoom: 14,
+                zoomControl: false,
+                disableDoubleClickZoom: true,
+                mapTypeControl: false,
+                scaleControl: false,
+                scrollwheel: false,
+                panControl: false,
+                streetViewControl: false,
+                draggable : true,
+                overviewMapControl: false,
+                overviewMapControlOptions: {
+                    opened: false,
+                },
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#b79f66"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}],
+            }
+            var mapElement = document.getElementById('map');
+            var map = new google.maps.Map(mapElement, mapOptions);
+            var locations = [
+                ['Roskosh', 'undefined', 'undefined', 'undefined', 'undefined', 50.38791, 30.694380499999966, 'images/map-icon.png']
+            ];
+            for (i = 0; i < locations.length; i++) {
+                if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+                if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+                if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+                if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+                if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+
+                marker = new google.maps.Marker({
+                    icon: markericon,
+                    position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+                    map: map,
+                    title: locations[i][0],
+                    desc: description,
+                    tel: telephone,
+                    email: email,
+                    web: web
+                });
+                link = 'images/map-icon.png';
+            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    <div class="wrap">
+        <div id="menu-btn">
+            Roskosh<br><span>design</span>
+            <div class="btn"><span> </span><span></span><span></span></div>
+        </div>
+        <div class="menu">
+            <ol>
+                <li><span class="no">No</span><a href="index.html">Главная</a><span class="triangle"></span></li>
+                <li><span class="no">No</span><a href="about.html">О нас</a><span class="triangle"></span></li>
+                <li><span class="no">No</span><a href="best-works.html">Лучшие работы</a><span class="triangle"></span></li>
+                <li><span class="no">No</span><a href="blog.html">Новости</a><span class="triangle"></span></li>
+                <li><span class="no">No</span><a href="portfolio.html">Портфолио</a><span class="triangle"></span></li>
+                <li><span class="no">No</span><a href="contact.html">Контакты</a><span class="triangle"></span></li>
+                <li><span class="no">No</span><a href="services.html">Услуги</a><span class="triangle"></span></li>
+            </ol>
+        </div>
+        <div class="lang">
+            <select id="language" name="">
+                <option value="rus">Ru</option>
+                <option value="eng">En</option>
+                <option value="ger">Ge</option>
+            </select>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="contact">
+        <div class="info">
+            <div class="base-title">Контакты</div>
+            <div class="address">
+                <span>Адрес:</span>
+                <p>г. Киев, ул. Нижний Вал 32</p>
+            </div>
+            <div class="phone">
+                <span>Телефон:</span>
+                <a href="tel:+380933434567">+38(093) 343 45 67</a>
+            </div>
+            <div class="mail">
+                <span>e-mail:</span>
+                <a href="mailto:info@gmail.com">info@gmail.com</a>
+            </div>
+        </div>
+        <div class="custom-g-map">
+            <div id="map">
+            </div>
+        </div>
+    </div>
+    <div class="feedback-form">
+        <div class="base-title">ОБРАТНАЯ СВЯЗЬ</div>
+        <div>
+            <form autocomplete="off" id="contactform">
+                <div class="contactlog">
+                    <input id="name" name="name" placeholder="Имя" type="text">
+                    <span class="error-border"></span>
+                </div>
+                <div class="contactlog">
+                    <input id="email" name="email" placeholder="E-mail" type="text">
+                    <span class="error-border"></span>
+                </div>
+                <div class="contactlog">
+                    <input id="number" name="number" placeholder="Номер телефона" type="text">
+                    <span class="error-border"></span>
+                </div>
+                <div class="con">
+                    <input id="text" placeholder="Введите текст" name="text"  type="text">
+                    <span class="error-border"></span>
+                </div>
+
+                <div class=" submit-btn">
+                    <input id="createsubmit" type="submit" value="ОТПРАВИТЬ">
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer-top">
+        <div class="logo">ROSKOSH<br><span>DESIGN</span></div>
+        <div class="contacts-info">
+            <div class="phone"> +38 (044) 361 -33- 26;     <span>+38 (063) 252  -17- 08;</span></div>
+            <div class="mail">info@roskoshdesign.com</div>
+        </div>
+        <div class="footer-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="portfolio.html">Портфолио</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="best-works.html">Работы</a></li>
+                <li><a href="blog.html">Новости</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="services.html">Услуги</a></li>
+            </ul>
+        </div>
+        <div class="social-links">
+            <a href="#" class="fb"></a>
+            <a href="#" class="tw"></a>
+            <a href="#" class="vk"></a>
+            <a href="#" class="pi"></a>
+            <a href="#" class="inst"></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="left">© 2016 Roskosh Design<br>
+            Дизайн интерера, дизайн квартиры, дизайн дома
+        </div>
+        <div class="right">Сделано в Dizz Agency</div>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl-carousel/owl.carousel.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    (function() {
+        // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+        if (!String.prototype.trim) {
+            (function() {
+                // Make sure we trim BOM and NBSP
+                var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                String.prototype.trim = function() {
+                    return this.replace(rtrim, '');
+                };
+            })();
+        }
+
+        [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+            // in case the input is already filled..
+            if( inputEl.value.trim() !== '' ) {
+                classie.add( inputEl.parentNode, 'input--filled' );
+            }
+
+            // events:
+            inputEl.addEventListener( 'focus', onInputFocus );
+            inputEl.addEventListener( 'blur', onInputBlur );
+        } );
+
+        function onInputFocus( ev ) {
+            classie.add( ev.target.parentNode, 'input--filled' );
+        }
+
+        function onInputBlur( ev ) {
+            if( ev.target.value.trim() === '' ) {
+                classie.remove( ev.target.parentNode, 'input--filled' );
+            }
+        }
+    })();
+</script>
+</body>
+</html>

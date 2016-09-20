@@ -4,11 +4,20 @@ header {
   z-index: 9;
   padding-top: 48px;
 
+  @media (max-width: 1000px) {
+    padding-top: 20px;
+  }
+
   .wrap {
     padding-left: 50px;
     padding-right: 50px;
     margin: 0 auto;
     @include clearfix;
+
+    @media (max-width: 1560px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 
   #menu-btn {
@@ -26,6 +35,13 @@ header {
     position: fixed;
     z-index: 99;
 
+    @media (max-width: 1000px) {
+      padding-top: 15px;
+      padding-left: 20px;
+      width: 150px;
+      height: 75px;
+    }
+
     &:hover {
       cursor: pointer;
     }
@@ -38,12 +54,21 @@ header {
     .btn {
       padding-top: 9px;
       padding-left: 21px;
+
+      @media (max-width: 1000px) {
+          padding-left: 5px;
+      }
+
       span {
         width: 42px;
         height: 2px;
         background-color: #b79f66;
         display: block;
         margin-bottom: 4px;
+
+        @media (max-width: 1000px) {
+          width: 36px;
+        }
       }
     }
   }
@@ -59,13 +84,16 @@ header {
     z-index: 9;
     opacity: 0;
     visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &.active {
       visibility: visible;
       opacity: 1;
 
       ol  {
-        transform: translate(-50%, -50%);
+        transform: translateY( 0%);
       }
 
     }
@@ -73,9 +101,7 @@ header {
     ol {
       counter-reset: li;
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -75%);
+      transform: translateY(-50%);
       transition: 0.8s;
 
       li {
@@ -93,6 +119,14 @@ header {
           position: absolute;
           line-height: 75px;
           left: 0;
+
+          @media (max-width: 1000px) {
+            line-height: 55px;
+          }
+
+          @media (max-width: 760px) {
+            line-height: 35px;
+          }
         }
 
         .triangle {
@@ -103,6 +137,11 @@ header {
           height: 0px;
           border: 6px solid transparent;
           border-left: 8px solid #88714d;
+
+          @media (max-width: 1000px) {
+            top: 22px;
+            right: 5px;
+          }
         }
 
         .no {
@@ -134,6 +173,20 @@ header {
           padding-left: 60px;
           padding-right: 60px;
 
+          @media (max-width: 1000px) {
+            line-height: 60px;
+            padding-left: 35px;
+            padding-right: 35px;
+          }
+
+          @media (max-width: 500px) {
+            letter-spacing: 4px;
+          }
+
+          @media (max-width: 760px) {
+            line-height: 35px;
+          }
+
           &:after {
             content: '';
             background: #88714d;
@@ -143,6 +196,10 @@ header {
             width: 0;
             left: 10%;
             transition: width 0.2s;
+
+            @media (max-width: 1000px) {
+              top: 27px;
+            }
           }
 
           &:hover {
@@ -169,6 +226,11 @@ header {
       position: absolute;
       top: 38px;
       right: 25px;
+
+      @media (max-width: 1000px) {
+        top: 33px;
+        right: 20px;
+      }
     }
 
     select {
@@ -185,6 +247,12 @@ header {
       -webkit-appearance: none;
       padding-left: 28px;
       text-transform: uppercase;
+
+      @media (max-width: 1000px) {
+        width: 75px;
+        height: 75px;
+        padding-left: 20px;
+      }
     }
   }
 }

@@ -17,6 +17,10 @@
     position: absolute;
     padding-left: 7px;
     top: -2px;
+
+    @media (max-width: 1000px) {
+      top: 0;
+    }
   }
 
   &:before {

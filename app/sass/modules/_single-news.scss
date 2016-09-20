@@ -32,9 +32,31 @@
   padding-right: 90px;
   padding-bottom: 170px;
 
+  @media (max-width: 1560px) {
+    padding: 0 90px 140px;
+  }
+
+  @media (max-width: 1100px) {
+    padding: 0 40px 100px;
+  }
+
+  @media (max-width: 400px) {
+    padding: 0 40px 50px;
+  }
+
   .base-title {
     padding-top: 130px;
     padding-bottom: 60px;
+
+    @media (max-width: 1560px) {
+      padding-top: 100px;
+      padding-bottom: 50px;
+    }
+
+    @media (max-width: 1100px) {
+      padding-top: 80px;
+      padding-bottom: 40px;
+    }
   }
 
   .item {

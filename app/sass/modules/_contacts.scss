@@ -1,0 +1,255 @@
+#map {
+  width: 100%;
+  max-width: 954px;
+  height: 754px;
+  background: #191919!important;
+
+  .gm-style > div:nth-child(2), .gm-style .gmnoprint {
+    display: none!important;
+  }
+}
+
+.contact {
+  padding: 140px 15px 160px;
+  @include clearfix;
+
+  @media (max-width: 1100px) {
+    padding: 120px 15px 130px;
+  }
+
+  @media (max-width: 760px) {
+    padding: 90px 15px 80px;
+  }
+
+  .base-title {
+    position: relative;
+    padding-bottom: 80px;
+    margin-bottom: 70px;
+
+    @media (max-width: 1000px) {
+      padding-bottom: 60px;
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 760px) {
+      padding-bottom: 40px;
+      margin-bottom: 30px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 2px;
+      background-color: #b79f66;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      margin-left: -35px;
+    }
+  }
+
+  .info {
+    width: 50%;
+    float: left;
+
+    @media (max-width: 1000px) {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .address, .phone, .mail {
+      padding-bottom: 40px;
+      max-width: 375px;
+      margin: 0 auto;
+
+      @media (max-width: 1000px) {
+        text-align: center;
+      }
+
+      @media (max-width: 760px) {
+        padding-bottom: 20px;
+      }
+
+      span {
+        color: white;
+        font-family: $font-roboto;
+        @include fontSize(36px);
+        font-weight: 100;
+        text-transform: uppercase;
+
+        @media (max-width: 760px) {
+          @include fontSize(30px);
+        }
+      }
+
+      p, a {
+        color: #dfdede;
+        font-family: $font-roboto;
+        @include fontSize(18px);
+        font-weight: 300;
+        display: inline-block;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  .custom-g-map {
+    width: 50%;
+    float: left;
+
+    @media (max-width: 1000px) {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+}
+.feedback-form {
+  width: 100%;
+  max-width: 780px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  padding-bottom: 150px;
+
+  @media (max-width: 1100px) {
+    padding-bottom: 110px;
+  }
+
+  .base-title {
+    position: relative;
+    padding-bottom: 80px;
+    margin-bottom: 70px;
+
+    @media (max-width: 1000px) {
+      padding-bottom: 60px;
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 760px) {
+      padding-bottom: 40px;
+      margin-bottom: 30px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 2px;
+      background-color: #b79f66;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      margin-left: -35px;
+    }
+  }
+
+  form {
+    font-size: 0;
+  }
+
+  .contactlog {
+    display: inline-block;
+    width: calc(33.333% - 20px);
+    @include fontSize(14px);
+    margin: 0 10px;
+
+    &:nth-child(1){
+      margin-left: 0;
+      margin-right: 20px;
+    }
+
+    &:nth-child(3){
+      margin-right: 0;
+      margin-left: 20px;
+    }
+
+    @media (max-width: 760px) {
+      display: block;
+      width: 100%;
+      margin-left: 0!important;
+    }
+  }
+  .con {
+    @include fontSize(14px);
+    width: 100%;
+  }
+
+  .contactlog, .con {
+    position: relative;
+    margin-bottom: 40px;
+    .error-border {
+      width: 0;
+    }
+
+    input {
+      border: none;
+      width: 100%;
+      color: #a6a6a6;
+      font-family: $font-roboto;
+      @include fontSize(14px);
+      font-weight: 400;
+      line-height: 32px;
+      background: none;
+      padding-left: 8px;
+      outline: none;
+      border-bottom: 1px solid #b79f66;
+
+      &.error + .error-border {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: red;
+        position: absolute;
+        bottom: 0;
+        transition: 0.30s ease-in 0s;
+      }
+
+      &.not_error + .error-border {
+        width: 0;
+        transition: 0.30s ease-in 0s;
+      }
+    }
+
+  }
+
+  .submit-btn {
+    @include fontSize(14px);
+    text-align: center;
+    max-width: 230px;
+    margin: 0 auto;
+    position: relative;
+
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      background: #b79f66;
+      height: 38px;
+      width: 0;
+      transition: 0.30s ease-in 0s;
+    }
+
+    &:hover {
+      &:before {
+        width: 100%;
+      }
+    }
+
+    input {
+      width: 100%;
+      height: 38px;
+      border: 1px solid #b79f66;
+      color: white;
+      font-family: $font-roboto;
+      @include fontSize(14px);
+      font-weight: 700;
+      line-height: 38px;
+      background: none;
+      z-index: 999;
+      position: relative;
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+.sort-btn {
+  width: 100%;
+  max-width: 1590px;
+  margin: 30px auto 60px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  @media (max-width: 760px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  a {
+    display: inline-block;
+    color: white;
+    font-family: $font-roboto;
+    @include fontSize(20px);
+    font-weight: 400;
+    line-height: 98px;
+    text-align: center;
+    width: 25%;
+    max-width: 369px;
+    height: 98px;
+    border: 1px solid #b79f66;
+    position: relative;
+
+    @media (max-width: 760px) {
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      background: #b79f66;
+      height: 100%;
+      width: 0;
+      transition: 0.30s ease-in 0s;
+      z-index: -1;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.portfolio-cont {
+  max-width: 1590px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  @include clearfix;
+
+
+  .item {
+    position: relative;
+    width: calc(50% - 15px);
+    height: 1000px;
+    overflow: hidden;
+    margin-bottom: 35px;
+    display: table;
+    float: left;
+    margin-right: 15px;
+
+    @media (max-width: 900px) {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      height: 70vh;
+    }
+
+    &.sm {
+      height: 500px;
+
+      @media (max-width: 900px) {
+        height: 50vh;
+      }
+    }
+    
+    &.right {
+      float: right;
+      margin-left: 15px;
+      margin-right: 0;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: auto;
+      height: auto;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      transition: all ease-in 0.5s;
+    }
+
+    .base-title-sm {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    &:hover {
+      img {
+        filter: brightness(1.4);
+      }
+    }
+  }
+
+  .grid-item, .grid-sizer {
+    width: 50%;
+  }
+}

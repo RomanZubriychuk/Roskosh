@@ -3,6 +3,19 @@
   padding: 215px 30px 140px;
   background: url(../images/about-front-bg.png) no-repeat 50% ;
 
+  @media (max-width: 1560px) {
+    padding: 170px 15px 140px;
+  }
+
+  @media (max-width: 760px) {
+    background-size: contain;
+  }
+
+  @media (max-width: 400px) {
+    padding: 80px 15px 50px;
+  }
+
+
   a {
     text-decoration: none;
     position: relative;
@@ -25,6 +38,17 @@
       line-height: 90px;
       letter-spacing: 26px;
       transition: color ease 0.5s;
+
+      @media (max-width: 1100px) {
+        letter-spacing: 15px;
+      }
+
+      @media (max-width: 760px) {
+        @include fontSize(50px);
+        letter-spacing: 10px;
+        line-height: 70px;
+      }
+
     }
 
     p {
@@ -73,21 +97,37 @@
   &.about-block {
     padding: 230px 15px;
 
+    @media (max-width: 1560px) {
+      padding: 170px 15px;
+    }
+
+    @media (max-width: 1100px) {
+      padding: 70px 15px;
+    }
+
     .box {
       background: url(../images/about-box-bg.jpg) 50%;
       background-size: 100% 100%;
       text-align: center;
       transition: background-size 3s ease-in-out ,background-position 3s ease-in-out;
 
+      @media (max-width: 1560px) {
+        background-size: cover;
+      }
+
       .base-title {
         padding-top: 110px;
         padding-bottom: 65px;
+
+        @media (max-width: 760px) {
+          padding-top: 80px;
+        }
       }
 
       p {
         max-width: 720px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
         display: block;
         margin: 0 auto;
       }
@@ -99,6 +139,11 @@
       &:hover {
         background-size: 150% 150%;
         background-position: 10%;
+
+        @media (max-width: 1560px) {
+          background-size: cover;
+          background-position: 0;
+        }
       }
     }
 
@@ -110,9 +155,18 @@
         background-size: 100% 100%;
         transition: background-size 3s ease-in-out ,background-position 3s ease-in-out;
 
+        @media (max-width: 1560px) {
+          background-size: cover;
+        }
+
         &:hover {
           background-size: 150% 150%;
           background-position: 80% 20%;
+
+          @media (max-width: 1560px) {
+            background-size: cover;
+            background-position: 0;
+          }
         }
       }
     }
@@ -123,12 +177,34 @@
 .our-clients, .show-us {
   max-width: 1740px;
   margin: 0 auto;
-  padding-left: 90px;
-  padding-right: 90px;
-  padding-bottom: 230px;
+  padding: 0 90px 230px;
+
+  @media (max-width: 1560px) {
+    padding: 0 90px 140px;
+  }
+
+  @media (max-width: 1100px) {
+    padding: 0 40px 100px;
+  }
+
+  @media (max-width: 400px) {
+    padding: 0 40px 50px;
+  }
 
   .base-title {
     padding-bottom: 90px;
+
+    @media (max-width: 1560px) {
+      padding-bottom: 70px;
+    }
+
+    @media (max-width: 1100px) {
+      padding-bottom: 50px;
+    }
+
+    @media (max-width: 760px) {
+      padding-bottom: 30px;
+    }
   }
 
   .item {
@@ -137,6 +213,7 @@
     height: 294px;
     background-color: #131313;
     padding: 15px;
+    margin: 0 auto;
 
 
     .wrap {
@@ -180,13 +257,31 @@
   padding-bottom: 230px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   max-width: 1590px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 
+  @media (max-width: 1560px) {
+    padding-bottom: 140px;
+  }
+
+  @media (max-width: 1100px) {
+    flex-wrap: wrap;
+    padding-bottom: 80px;
+  }
+
   .base-title {
     padding-bottom: 60px;
+
+    @media (max-width: 1500px) {
+      padding-bottom: 40px;
+    }
+
+    @media (max-width: 1100px) {
+      padding-bottom: 20px;
+    }
   }
 
   p {
@@ -219,6 +314,10 @@
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 150px;
+
+    @media (max-width: 1100px) {
+      margin-bottom: 110px;
+    }
   }
 
   .map-title {
@@ -235,5 +334,11 @@
     left: 0;
     top: 0;
     opacity: 0.5;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+
   }
 }

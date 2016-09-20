@@ -3,6 +3,10 @@ footer {
   margin: 0 auto;
   padding: 0 30px 70px;
 
+  @media (max-width: 1560px) {
+    padding: 0 15px 40px;
+  }
+
   .footer-top {
     @include clearfix;
 
@@ -17,10 +21,23 @@ footer {
       text-align: right;
       margin-right: 70px;
 
+      @media (max-width: 760px) {
+        max-width: inherit;
+        width: calc(50% - 20px);
+        margin-right: 20px;
+      }
+
+      @media (max-width: 400px) {
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+      }
+
       span {
         @include fontSize(16px);
       }
     }
+
     .contacts-info {
       float: left;
       color: #a0a0a0;
@@ -30,11 +47,36 @@ footer {
       margin-right: 150px;
       line-height: 20px;
 
+      @media (max-width: 1400px) {
+        margin-right: 50px;
+      }
+
+      @media (max-width: 760px) {
+        margin-right: 0;
+        margin-left: 20px;
+        width: calc(50% - 20px);
+      }
+
+      @media (max-width: 400px) {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+      }
+
       .phone {
         padding-bottom: 20px;
 
+        @media (max-width: 760px) {
+          padding-bottom: 0;
+        }
+
         span {
           padding-left: 15px;
+
+          @media (max-width: 1300px) {
+            display: block;
+            padding-left: 30px;
+          }
         }
 
         &:before {
@@ -61,11 +103,31 @@ footer {
       float: left;
       max-width: 334px;
 
+      @media (max-width: 760px) {
+        max-width: inherit;
+        float: left;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
       li {
         display: inline-block;
         padding-right: 180px;
         max-width: 217px;
         margin-bottom: 25px;
+
+        @media (max-width: 1100px) {
+          display: block;
+          margin-bottom: 10px;
+          padding-right: 0;
+        }
+
+        @media (max-width: 760px) {
+          max-width: inherit;
+        }
 
         &:nth-child(2n) {
           padding-right: 0;
@@ -86,6 +148,13 @@ footer {
     }
     .social-links {
       float: right;
+
+      @media (max-width: 760px) {
+        float: none;
+        clear: both;
+        text-align: -webkit-center;
+        margin-bottom: 20px;
+      }
 
       a {
         width: 34px;
@@ -138,6 +207,7 @@ footer {
 
     .left {
       float: left;
+
     }
 
     .right {
@@ -150,6 +220,11 @@ footer {
       @include fontSize(13px);
       font-weight: 400;
       line-height: 23px;
+
+      @media (max-width: 500px) {
+        float: none;
+        text-align: center;
+      }
     }
   }
 }

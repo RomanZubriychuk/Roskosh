@@ -78,8 +78,15 @@
       font-family: $font-roboto;
       @include fontSize(40px);
       font-weight: 400;
-      line-height: 30px;
+      line-height: 40px;
       position: relative;
+      text-align: center;
+      padding-right: 15px;
+      padding-left: 15px;
+
+      @media (max-width: 760px) {
+        @include fontSize(30px);
+      }
 
       &:before {
         content: '';
@@ -112,10 +119,20 @@
     height: auto;
     padding-top: 130px;
     padding-bottom: 130px;
+
+    @media (max-width: 1100px) {
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+
+    @media (max-width: 760px) {
+      padding-top: 150px;
+      padding-bottom: 60px;
+    }
   }
 
   //Services page
-  &.top-services {
+  &.top-services, &.top-portfolio {
     background: url(../images/services-top.jpg);
     background-size: cover;
     flex-direction: column;
@@ -137,4 +154,9 @@
       text-align: center;
     }
   }
+
+   &.top-portfolio {
+     background: url(../images/portfolio-top.jpg);
+     background-size: cover;
+   }
 }

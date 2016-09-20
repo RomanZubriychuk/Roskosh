@@ -6,6 +6,11 @@
   margin: 0;
   font-size: 0;
 
+  @media (max-width: 760px) {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
   li {
     display: inline-block;
 
@@ -46,6 +51,11 @@
   width: 100%;
   @include clearfix;
 
+  @media (max-width: 400px) {
+    max-width: 165px;
+    margin: 0 auto;
+  }
+
 
   .prev {
     float: left;
@@ -58,6 +68,10 @@
       position: absolute;
       left: -8px;
       top: 3px;
+
+      @media (max-width: 1000px) {
+        top: 1px;
+      }
     }
 
     &:before {
@@ -69,5 +83,9 @@
 
   .next {
     float: right;
+
+    @media (max-width: 400px) {
+      float: left;
+    }
   }
 }
